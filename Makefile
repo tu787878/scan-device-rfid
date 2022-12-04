@@ -23,7 +23,7 @@ bin/mifare_socket: obj/mifare_socket.o obj/sl500.o
 	$(CC) $(LDFLAGS) -o $@ obj/mifare_socket.o obj/sl500.o
 
 bin/testprog: obj/testprog.o obj/sl500.o
-	$(CC) $(LDFLAGS) -o $@ obj/testprog.o obj/sl500.o
+	$(CC) $(LDFLAGS) -o $@ obj/testprog.o obj/sl500.o -lcurl -lcjson
 
 #Aliases
 mifare_socket: bin/mifare_socket
